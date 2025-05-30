@@ -1,26 +1,20 @@
-from seleniumwire import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.ui import WebDriverWait
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
+from seleniumwire import webdriver # type: ignore
+from selenium.webdriver.chrome.service import Service # type: ignore
+from selenium.webdriver.support.ui import WebDriverWait # type: ignore
+from webdriver_manager.chrome import ChromeDriverManager # type: ignore
+from selenium.webdriver.chrome.options import Options # type: ignore
+from selenium.webdriver.support import expected_conditions as EC # type: ignore
+from selenium.webdriver.common.by import By # type: ignore
 import time
 import os
+from dotenv import load_env # type: ignore
 
+load_env()
 # Format proxy with authentication
-username = "upb7sw65uf"
-password = "oa610luara"
-host = "104.164.71.234"
-port = "7777"
-
-# 63613084 Mlj5394 223744 Aic Au0747898 2025-05-25 2025-11-25
-# 71914888 LRS3329 133123 State Farm 5985142E2938 2025-05-29 2025-11-29
-# titleNumber = "71914888"
-# plateNumber = "LRS3329"
-# odometer = "133123"
-# companyName = "State Farm"
-# policyNumber = "5985142E2938"
+username = os.getenv("PROXY_USERNAME")  
+password = os.getenv("PROXY_PASSWORD")
+host = os.getenv("PROXY_HOST")
+port = os.getenv("PROXY_PORT")
 
 titleNumber = "80598171"
 plateNumber = "RR264E"
