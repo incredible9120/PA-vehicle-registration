@@ -7,7 +7,7 @@ Automate vehicle registration process in Pennsylvania, US
 
 ## How to run
 
-1. Open XQuartz to allow remote-access to the server via GUI:
+1. Install and Open XQuartz to allow remote-access to the server via GUI:
 ```bash
 open -a XQuartz
 ```
@@ -19,7 +19,7 @@ xhost +<server-url>
 
 3. Connect to the server via SSH:
 ```bash
-ssh ...
+ssh -Y <user-name>@<server-url>
 ```
 
 4. Install required packages:
